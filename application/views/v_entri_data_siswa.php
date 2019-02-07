@@ -265,7 +265,7 @@
                                   <label class="control-label text-left col-md-3">Berat / Panjang Ketika Lahir</label>
                                   <div class="col-md-9">
                                       <input type="text" placeholder="..." class="form-control" name="berat_panjang">
-                                      <small style="color: #c0392b ">Dengan format berat Kg, panjang Cm <i>(contoh : 3,5 Kg , 10 Cm) </i></small>
+                                      <small style="color: #c0392b ">Dengan format berat Kg, panjang Cm <i>(contoh : 3,5 Kg / 10 Cm) </i></small>
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -1109,9 +1109,74 @@
                       <h4 class="m-b-0 text-white">Entri Kuisoner</h4>
                   </div>
                   <div class="card-body">
-                      <form autocomplete="off" method="post" action="<?php echo base_url("Riwayat_kesehatan/t_entri_riwayat_kesehatan")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                      <form autocomplete="off" method="post" action="<?php echo base_url("Data_kuisioner/t_entri_data_kuisioner")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
                           <div class="form-body">
-                              <h3>Belum Ada Isinya, Hehehehe</h3>
+                              <div class="form-group row">
+                                  <h3 class="control-label text-left col-md-12">IX. Kondisi Keluarga</h3>
+                              </div>
+                              <div class="form-group">
+                                  <label>Apa cara khusus Bapak/Ibu untuk mendisiplinkan putra putri nya ?</label>
+                                  <textarea class="form-control" rows="3" name="jawaban_1" required=""></textarea>
+                              </div>
+                              <div class="form-group">
+                                  <label>Apakah Bapak/Ibu menerapkan keterbukaan dan kejujuran kepada putra-putrinya, termasuk masalah-masalah seperti sakit dan menganggur ?</label>
+                                  <textarea class="form-control" rows="3" name="jawaban_2" required=""></textarea>
+                              </div>
+                              <div class="form-group">
+                                  <label>Apakah yang Bapak/Ibu lakukan ketika mendapatkan kesulitan dalam memecahkan suatu masalah ?</label>
+                                  <textarea class="form-control" rows="3" name="jawaban_3" required=""></textarea>
+                              </div>
+                              <div class="form-group">
+                                  <label>Bila suatu saat prestasi anak menurun, Bapak/Ibu dipanggil ke sekolah, apa yang akan Bapak/Ibu lakukan ?</label>
+                                  <textarea class="form-control" rows="3" name="jawaban_4" required=""></textarea>
+                              </div>
+                              <div class="form-group">
+                                  <label>Bila anak sering terlambat datang ke sekola, Bapak/Ibu dipanggil ke sekolah, apa yang akan Bapak/Ibu lakukan ?</label>
+                                  <textarea class="form-control" rows="3" name="jawaban_5" required=""></textarea>
+                              </div>
+                              <div class="form-group">
+                                  <label>Bila anak dihukum oleh gurunya disekolah, bagaimana tanggapan Bapak/Ibu ?</label>
+                                  <textarea class="form-control" rows="3" name="jawaban_6" required=""></textarea>
+                              </div>
+                              <div class="form-group">
+                                  <label>Bila anak mengganggu temannya di sekolah, bagaimana tanggapan Bapak/Ibu ?</label>
+                                  <textarea class="form-control" rows="3" name="jawaban_7" required=""></textarea>
+                              </div>
+                              <div class="form-group">
+                                  <label>Bila peralatan sekolah anak sering tidak lengkap karena lupa membawa atau yang lainnya, lalu guru mengingatkan Bapak/Ibu untuk lebih memperhatikan ananda, bagaimana tanggapan Bapak/Ibu ?</label>
+                                  <textarea class="form-control" rows="3" name="jawaban_8" required=""></textarea>
+                              </div>
+                              <br>
+
+                              <div class="form-group row">
+                                  <h3 class="control-label text-left col-md-12">XI. Alasan Memasukan Ke Lembaga Pendidikan Al-Baitul Amien Jember</h3>
+                              </div>
+                              <div class="form-group">
+                                  <label>Pilih Salah Satu Item yang Dianggap Paling Sesuai ! </label>
+                                      <select class="form-control custom-select" name="jawaban_9">
+                                            <option>Menginginkan anak kami menjadi anak yang sholih dan sholihah</option>
+                                            <option>Mendapatkan pendidikan berimbang antara ilmu umum dan agama</option>
+                                            <option>Memperoleh prestasi akademik yang tinggi</option>
+                                      </select>
+                              </div>
+                              <br>
+
+                              <div class="form-group row">
+                                  <h3 class="control-label text-left col-md-12">XII. Informasi Pendaftaran Lembaga Pendidikan Al-Baitul Amien Jember</h3>
+                              </div>
+                              <label>Pilih Beberapa Item yang Dianggap Paling Sesuai ! </label>
+                              <div class="form-group row">
+                                  <select class="form-control custom-select" name="jawaban_10">
+                                        <option>Dari Rekan Kerja</option>
+                                        <option>Dari Koran</option>
+                                        <option>Dari Radio</option>
+                                        <option>Dari Spanduk</option>
+                                        <option>Dari Buletin</option>
+                                        <option>Berhubungan Langsung Dengan Al-Baitul Amien</option>
+                                        <option>Dari Brosur</option>
+                                        <option>Lainnya</option>
+                                  </select>
+                                </div>
                           </div>
                           <div class="form-actions">
                               <div class="row">

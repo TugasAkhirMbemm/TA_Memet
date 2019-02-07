@@ -52,7 +52,7 @@ class Data_siswa extends CI_Controller {
         'bahasa_sehari_hari_dirumah' => $bahasa_sehari_hari,
         'anak_ke_siswa' => $anak_ke,
         'no_telp_siswa' => $no_hp,
-        'id_user' => 2,
+        'id_user' => 5,
         'id_status_diterima' => 3,
         'tempat_lahir_siswa' => $tempat_lahir,
         'gambar_siswa' => $foto        
