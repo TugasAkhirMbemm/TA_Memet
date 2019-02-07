@@ -24,9 +24,12 @@
     <li class="nav-item">
       <a class="nav-link" data-toggle="tab" href="#menu3">Data Keluarga</a>
     </li>
-    <!-- <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#menu4">Riwayat Kesehatan</a>
-    </li> -->
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu4">Kemampuan Anak</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu5">Kuisoner</a>
+    </li>
   </ul>
 
   <!-- Tab panes -->
@@ -784,23 +787,16 @@
           </div>
       </div>
     </div>
-    <!-- <div id="menu4" class="container tab-pane fade"><br>
+    <div id="menu4" class="container tab-pane fade"><br>
       <div class="row">
           <div class="col-lg-12">
               <div class="card card-outline-info">
                   <div class="card-header" style="background-color: #2dc997">
-                      <h4 class="m-b-0 text-white">Entri Riwayat Kesehatan</h4>
+                      <h4 class="m-b-0 text-white">Entri Kemampuan Anak</h4>
                   </div>
                   <div class="card-body">
-                      <form autocomplete="off" method="post" action="<?php echo base_url("Riwayat_kesehatan/t_entri_riwayat_kesehatan")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                      <form autocomplete="off" method="post" action="<?php echo base_url("Data_kemampuan/t_entri_kemampuan_anak")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
                           <div class="form-body">
-<<<<<<< HEAD
-                              <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Berat Badan</label>
-                                  <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="berat_badan" size="3" maxlength="5" onKeyPress="return goodchars(event,'0123456789 kgKG',this)">
-                                      <small class="form-control-feedback"> Diberi satuan (Kg) </small>
-=======
                              <div class="form-group row">
                                   <h3 class="control-label text-left col-md-12">VIII. Kemampuan Anak</h3>
                               </div>
@@ -935,207 +931,143 @@
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Tinggi Badan</label>
+                                  <label class="control-label text-left col-md-3">Menjawab salam</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="tinggi_badan" size="3" maxlength="6" onKeyPress="return goodchars(event,'0123456789 cmCM',this)">
-                                      <small class="form-control-feedback"> Diberi satuan (Cm) </small>
-=======
                                       <select class="form-control custom-select" name="menjawab_salam">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Golongan Darah</label>
+                                  <label class="control-label text-left col-md-3">Hafal do'a do'a tertentu</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <select class="form-control custom-select" name="gol_darah">
-                                        <?php foreach ($gol_darah->result() as $gol) { ?>
-                                          <option value="<?php echo $gol -> id_golongan_darah ?>"><?php echo $gol -> golongan_darah; ?></option>
-                                        <?php } ?>
-=======
                                       <select class="form-control custom-select" name="hafal_doa_doa">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                       </select>
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Lama Masa Meminum Asi</label>
+                                  <label class="control-label text-left col-md-3">Mengenal huruf latin</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="lama_minum_asi">
-=======
                                      <select class="form-control custom-select" name="mengenal_huruf_latin">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Perkembangan Dalam 2 Bulan</label>
+                                  <label class="control-label text-left col-md-3">Mengenal huruf arab</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="perkembangan">
-=======
                                       <select class="form-control custom-select" name="mengenal_huruf_arab">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Kelainan Dalam Tubuh</label>
+                                  <label class="control-label text-left col-md-3">Mengenal angka sampai dengan 5</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="kel_dalam_tubuh">
-=======
                                       <select class="form-control custom-select" name="mengenal_angka_sampai_5">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Makan Tambahan < 2 Bulan</label>
+                                  <label class="control-label text-left col-md-3">Menulis angka sampai dengan 5</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="makan_tambahan">
-=======
                                       <select class="form-control custom-select" name="menulis_angka_sampai_5">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Imunisasi Yang Pernah Diberikan</label>
+                                  <label class="control-label text-left col-md-3">Menulis huruf latin</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="imunisasi">
-=======
                                      <select class="form-control custom-select" name="menulis_latin">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Alergi Yang Dimiliki</label>
+                                  <label class="control-label text-left col-md-3">Menulis huruf arab</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="alergi">
-=======
                                      <select class="form-control custom-select" name="menulis_arab">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Penglihatan</label>
+                                  <label class="control-label text-left col-md-3">Menggambar bentuk sesuatu</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="penglihatan">
-=======
                                       <select class="form-control custom-select" name="menggambar">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Pendengaran</label>
+                                  <label class="control-label text-left col-md-3">Mewarnai suatu gambar</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="pendengaran">
-=======
                                       <select class="form-control custom-select" name="mewarnai_gambar">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Penampilan</label>
+                                  <label class="control-label text-left col-md-3">Menceritakan pengalaman</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="penampilan">
-=======
                                       <select class="form-control custom-select" name="menceritakan_pengalaman">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
+                              <hr>
+
+                              <!-- no 24 - 27 -->
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Ciri Fisik Yang Menonjol</label>
+                                  <label class="control-label text-left col-md-3">Belajar baca Al-Qur'an</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="ciri_fisik">
-=======
                                       <select class="form-control custom-select" name="belajar_baca_quran">
                                           <option>Sudah Pernah</option>
                                           <option>Belum Pernah</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Ciri Kepribadian Yang Menonjol</label>
+                                  <label class="control-label text-left col-md-3">Buku yang digunakan</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="ciri_kepribadian">
-=======
                                       <select class="form-control custom-select" name="buku_yg_digunakan">
                                           <option>Iqro'</option>
                                           <option>Qiroati</option>
                                           <option>Tilawati</option>
                                       </select>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Bakat Khusus Yang Menonjol</label>
+                                  <label class="control-label text-left col-md-3">Pencapaian jilid</label>
                                   <div class="col-md-9">
-<<<<<<< HEAD
-                                      <input type="text" placeholder="..." class="form-control" name="bakat">
-                                  </div>
-                              </div>
-                              <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Prestasi Yang Pernah Diraih</label>
-                                  <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="presatsi">
-                                  </div> -->
-=======
                                       <select class="form-control custom-select" name="pencapaian_jilid">
                                           <option>1</option>
                                           <option>2</option>
@@ -1161,8 +1093,25 @@
                                           </div>
                                       </div>
                                   </div>
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
                               </div>
+                          </div>
+                      </form>
+                  </div>
+              </div><br>
+          </div>
+      </div>
+    </div>
+    <div id="menu5" class="container tab-pane fade"><br>
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="card card-outline-info">
+                  <div class="card-header" style="background-color: #2dc997">
+                      <h4 class="m-b-0 text-white">Entri Kuisoner</h4>
+                  </div>
+                  <div class="card-body">
+                      <form autocomplete="off" method="post" action="<?php echo base_url("Riwayat_kesehatan/t_entri_riwayat_kesehatan")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                          <div class="form-body">
+                              <h3>Belum Ada Isinya, Hehehehe</h3>
                           </div>
                           <div class="form-actions">
                               <div class="row">

@@ -3,25 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Data_siswa extends CI_Controller {
 
-	function __construct()
+  function __construct()
     {
-	parent::__construct();
+  parent::__construct();
       $this->load->model('data_model');
-    	$this->load->model('core');
+      $this->load->model('core');
     }
-	public function index()
-	{
+  public function index()
+  {
     $data['jenis_kel'] = $this->data_model->get_jenis_kelamin();
     $data['agama'] = $this->data_model->get_agama();
     $data['warga'] = $this->data_model->get_kewarganegaraan();
     $data['gol_darah'] = $this->data_model->get_gol_darah();
-<<<<<<< HEAD
-    
-=======
->>>>>>> 5f5c6c7331b959f757d9c123716418df6bc19200
-		$this->load->view('v_entri_data_siswa',$data);
-	}
-	public function t_entri_data_siswa(){
+    $this->load->view('v_entri_data_siswa',$data);
+  }
+  public function t_entri_data_siswa(){
         if(isset($_POST['btnSimpan'])){
           $config = array('upload_path' => './gallery/Gambar_siswa/',
                   'allowed_types' => 'gif|jpg|png|jpeg'
@@ -71,7 +67,7 @@ class Data_siswa extends CI_Controller {
         $kesulitan_yang_dialamai = $this -> input -> post('kesulitan_yg_dialami');
         $aktivitas_yang_disukai = $this -> input -> post('aktivitas_yg_disukai');
         $data2 = array(
-          'id_siswa' => 13,
+          'id_siswa' => 2,
           'asal_sekolah' => $asal_sekolah,
           'nama_sekolah' => $nama_sekolah,
           'tahun_masuk' => $masuk_tahun,
