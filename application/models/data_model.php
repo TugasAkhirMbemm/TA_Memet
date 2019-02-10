@@ -61,14 +61,6 @@ class data_model extends CI_Model {
 	public function get_gol_darah(){
 		$query = $this->db->query("SELECT * FROM golongan_darah ORDER BY id_golongan_darah ASC");
 		return $query;
-	}
-	// public function get_soal_kemampuan(){
-	// 	$query = $this->db->query("SELECT * FROM soal_kemampuan_anak ORDER BY id_soal_kemampuan_anak ASC");
-	// 	return $query;
-	// }
-	// public function get_jawaban_kemampuan(){
-	// 	$query = $this->db->query("SELECT * FROM jawaban_kemampuan_anak ORDER BY id_jawaban_kemampuan_anak ASC");
-	// 	return $query;
-	// }    
+	}						
 }
 

@@ -33,6 +33,7 @@ class Mymodel extends CI_Model {
 
     // cek login di login form
   function ceklogin($username, $password){
+      // return $this->db->query("SELECT * from admin WHERE username_admin='$username' AND password_admin='$password'")->result();
       $this->db->where('username_admin', $username);
       $this->db->where('password_admin', $password);
       return $this->db->get('admin')->row();
@@ -158,23 +159,30 @@ class Mymodel extends CI_Model {
       }
 //tampilan pengumuman
 
+
 //tampilan verifikasi
       function tampilverifikasitk(){
         $this->db->select('siswa.*, user.*, pendaftaran_ulang.*');
         $this->db->join('user', 'siswa.id_user = user.id_user');
-        $this->db->join('pendaftaran_ulang', 'pendaftaran_ulang.id_user = user.id_user ');
+        $this->db->join('pendaftaran_ulang', 'pendaftaran_ulang.id_siswa = siswa.id_siswa '); //ini biar tampilnya hanya yg ada di pendaftaran ulang
         $this->db->from('siswa');
         $this->db->where('user.id_jenjang', '1');
+        $this->db->group_by('pendaftaran_ulang.id_pendaftaran_ulang'); //ini group by pendaftaran ulang agar ga dobel" , soalnya querynya kan pake inner join. 
         $data=$this->db->get();
         return $data;
       }
 
+       //select siswa.*,user.*,pendaftaran_ulang.* from siswa inner join user on(siswa.id_user=user.id_user) inner join pendaftaran_ulang on(pendaftaran_ulang.id_user = user.id_user) where user.id_jenjang=1 
+
+
+
       function tampilverifikasisd(){
         $this->db->select('siswa.*, user.*, pendaftaran_ulang.*');
         $this->db->join('user', 'siswa.id_user = user.id_user');
-        $this->db->join('pendaftaran_ulang', 'pendaftaran_ulang.id_user = user.id_user ');
+        $this->db->join('pendaftaran_ulang', 'pendaftaran_ulang.id_siswa = siswa.id_siswa ');
         $this->db->from('siswa');
         $this->db->where('user.id_jenjang', '2');
+        $this->db->group_by('pendaftaran_ulang.id_pendaftaran_ulang');
         $data=$this->db->get();
         return $data;
       }
@@ -182,25 +190,69 @@ class Mymodel extends CI_Model {
       function tampilverifikasismp(){
         $this->db->select('siswa.*, user.*, pendaftaran_ulang.*');
         $this->db->join('user', 'siswa.id_user = user.id_user');
-        $this->db->join('pendaftaran_ulang', 'user.id_user = pendaftaran_ulang.id_user ');
+        $this->db->join('pendaftaran_ulang', 'pendaftaran_ulang.id_siswa = siswa.id_siswa ');
         $this->db->from('siswa');
         $this->db->where('user.id_jenjang', '3');
+        $this->db->group_by('pendaftaran_ulang.id_pendaftaran_ulang');
         $data=$this->db->get();
         return $data;
       }
 
-//tampilan verifikasi
+//tampilan verifikasi awal
+      function tampilverifikasiawaltk(){
+        $this->db->select('siswa.*, user.*, pendaftaran_baru.*');
+        $this->db->join('user', 'siswa.id_user = user.id_user');
+        $this->db->join('pendaftaran_baru', 'pendaftaran_baru.id_siswa = siswa.id_siswa ');
+        $this->db->from('siswa');
+        $this->db->where('user.id_jenjang', '1');
+        $this->db->group_by('pendaftaran_baru.id_pendaftaran_baru');
+        $data=$this->db->get();
+        return $data;
+      }
+
+      function tampilverifikasiawalsd(){
+        $this->db->select('siswa.*, user.*, pendaftaran_baru.*');
+        $this->db->join('user', 'siswa.id_user = user.id_user');
+        $this->db->join('pendaftaran_baru', 'pendaftaran_baru.id_siswa = siswa.id_siswa ');
+        $this->db->from('siswa');
+        $this->db->where('user.id_jenjang', '2');
+        $this->db->group_by('pendaftaran_baru.id_pendaftaran_baru');
+        $data=$this->db->get();
+        return $data;
+      }
+
+      function tampilverifikasiawalsmp(){
+        $this->db->select('siswa.*, user.*, pendaftaran_baru.*');
+        $this->db->join('user', 'siswa.id_user = user.id_user');
+        $this->db->join('pendaftaran_baru', 'pendaftaran_baru.id_siswa = siswa.id_siswa ');
+        $this->db->from('siswa');
+        $this->db->where('user.id_jenjang', '3');
+        $this->db->group_by('pendaftaran_baru.id_pendaftaran_baru');
+        $data=$this->db->get();
+        return $data;
+      }
+
+//tampilan verifikasil
+      function tampilVerifikasi($id){
+        $this->db->where('pendaftaran_ulang.id_user',$id);
+        return $this->db->get('pendaftaran_ulang');
+      }
+
+      function tampilVerifikasiawal($id){
+        $this->db->where('pendaftaran_awal.id_user',$id);
+        return $this->db->get('pendaftaran_awal');
 
       function verifikasi_awal($id){
-        $this->db->select('pendaftaran_baru.*, user.*, siswa.*, bukti_transaksi.*');
+        $this->db->select('pendaftaran_baru.*, user.*, siswa.*');
         $this->db->join('siswa', 'user.id_user = siswa.id_user');
         $this->db->join('pendaftaran_baru', 'user.id_user = pendaftaran_baru.id_user ');
-        $this->db->join('bukti_transaksi', 'user.id_user = bukti_transaksi.id_user');
         $this->db->from('user');
         $this->db->where('user.id_user', $id);
+        $this->db->group_by('pendaftaran_baru.id_pendaftaran_baru');
         $data=$this->db->get();
         return $data;
       }
+
 
       function verifikasi_ulang($id){
         $this->db->select('siswa.*, user.*, pendaftaran_ulang.*');
@@ -208,9 +260,16 @@ class Mymodel extends CI_Model {
         $this->db->join('pendaftaran_ulang', 'user.id_user = pendaftaran_ulang.id_user');
         $this->db->from('user');
         $this->db->where('user.id_user', $id);
+        $this->db->group_by('pendaftaran_ulang.id_pendaftaran_ulang'); //tambahin ini aja itu buat apa, di group by id_user. 
+        
         $data=$this->db->get();
         return $data;
       }
+
+     
+      // select siswa.*,user.*,pendaftaran_ulang.* from user inner join siswa on(user.id_user=siswa.id_user) inner join pendaftaran_ulang on(pendaftaran_ulang.id_user = user.id_user) where user.id_user=2 
+
+     
 
 //tampilan dashboard
       function dashboard_daftar_baru(){
@@ -233,4 +292,5 @@ class Mymodel extends CI_Model {
 
 
 
+}
 }
