@@ -5,7 +5,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        <img src="<?php echo base_url() ?>_template/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
       </div>
         <div class="pull-left info">
           <p style="color: #ffffff;">Sekretaris Pusat</p>
@@ -56,6 +56,24 @@
           </ul>
         </li>
       </ul>
+
+      <ul class="sidebar-menu">
+       <!--  <li class="header">MAIN NAVIGATION</li> -->
+        <li class="treeview">
+          <a href="<?php echo base_url('pengumuman/pengumuman')?>">
+            <i class="fa fa-newspaper-o"></i> <span>Jadwal Test</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgtk')?>"><i class="fa fa-circle-o"></i>TK</a></li>
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgsd')?>"><i class="fa fa-circle-o"></i> SD</a></li>
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgsmp')?>"><i class="fa fa-circle-o"></i> SMP</a></li>
+          </ul>
+        </li>
+      </ul>
+
       <ul class="sidebar-menu">
        <!--  <li class="header">MAIN NAVIGATION</li> -->
         <li class="treeview">
@@ -89,16 +107,16 @@
        <ul class="sidebar-menu">
        <!--  <li class="header">MAIN NAVIGATION</li> -->
         <li class="treeview">
-          <a href="<?php echo base_url('pengumuman/pengumuman')?>">
-            <i class="fa fa-newspaper-o"></i> <span>Verifikasi Pendaftaran User</span>
+          <a href="<?php echo base_url('verifikasi/verifikasiawal')?>">
+            <i class="fa fa-newspaper-o"></i> <span>Verifikasi Pendaftaran</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgtk')?>"><i class="fa fa-circle-o"></i>TK</a></li>
-            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgsd')?>"><i class="fa fa-circle-o"></i> SD</a></li>
-            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgsmp')?>"><i class="fa fa-circle-o"></i> SMP</a></li>
+            <li><a href="<?php echo base_url('verifikasi/verifikasiawal/pgtk')?>"><i class="fa fa-circle-o"></i>TK</a></li>
+            <li><a href="<?php echo base_url('verifikasi/verifikasiawal/pgsd')?>"><i class="fa fa-circle-o"></i> SD</a></li>
+            <li><a href="<?php echo base_url('verifikasi/verifikasiawal/pgsmp')?>"><i class="fa fa-circle-o"></i> SMP</a></li>
           </ul>
         </li>
       </ul>
@@ -119,6 +137,59 @@
           </ul>
         </li>
       </ul>
+
+      <ul class="sidebar-menu">
+       <!--  <li class="header">MAIN NAVIGATION</li> -->
+        <li class="treeview">
+          <a href="<?php echo base_url('pengumuman/pengumuman')?>">
+            <i class="fa fa-newspaper-o"></i> <span>Pengumuman Awal</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgtk')?>"><i class="fa fa-circle-o"></i>TK</a></li>
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgsd')?>"><i class="fa fa-circle-o"></i> SD</a></li>
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgsmp')?>"><i class="fa fa-circle-o"></i> SMP</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="sidebar-menu">
+       <!--  <li class="header">MAIN NAVIGATION</li> -->
+        <li class="treeview">
+          <a href="<?php echo base_url('pengumuman/pengumuman')?>">
+            <i class="fa fa-newspaper-o"></i> <span>Pengumuman Akhir</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgtk')?>"><i class="fa fa-circle-o"></i>TK</a></li>
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgsd')?>"><i class="fa fa-circle-o"></i> SD</a></li>
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgsmp')?>"><i class="fa fa-circle-o"></i> SMP</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="sidebar-menu">
+       <!--  <li class="header">MAIN NAVIGATION</li> -->
+        <li class="treeview">
+          <a href="<?php echo base_url('pengumuman/pengumuman')?>">
+            <i class="fa fa-newspaper-o"></i> <span>Laporan Grafik</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgtk')?>"><i class="fa fa-circle-o"></i>TK</a></li>
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgsd')?>"><i class="fa fa-circle-o"></i> SD</a></li>
+            <li><a href="<?php echo base_url('pengumuman/pengumuman/pgsmp')?>"><i class="fa fa-circle-o"></i> SMP</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
     </section>
     <!-- /.sidebar -->
   </aside>
