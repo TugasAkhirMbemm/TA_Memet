@@ -1079,7 +1079,7 @@
                                   <label class="control-label text-left col-md-3">Surat pendek yang sudah dihafal</label>
                                   <div class="col-md-9">
                                       <textarea class="form-control" placeholder="..." rows="3" name="surat_pendek_yang_dihafal"></textarea>
-                                      <small style="color: #c0392b ">Sebutkan semua yang anda hafal</small>
+                                      <small style="color: #c0392b ">(Sebutkan semua yang anda hafal)</small>
                                   </div>
                               </div>
                           </div>
@@ -1153,7 +1153,7 @@
                               </div>
                               <div class="form-group">
                                   <label>Pilih Salah Satu Item yang Dianggap Paling Sesuai ! </label>
-                                      <select class="form-control custom-select" name="jawaban_9">
+                                      <select class="form-control custom-select" name="jawaban_9" required="">
                                             <option>Menginginkan anak kami menjadi anak yang sholih dan sholihah</option>
                                             <option>Mendapatkan pendidikan berimbang antara ilmu umum dan agama</option>
                                             <option>Memperoleh prestasi akademik yang tinggi</option>
@@ -1166,7 +1166,7 @@
                               </div>
                               <label>Pilih Beberapa Item yang Dianggap Paling Sesuai ! </label>
                               <div class="form-group row">
-                                  <select class="form-control custom-select" name="jawaban_10">
+                                  <select class="form-control custom-select" name="jawaban_10" required="">
                                         <option>Dari Rekan Kerja</option>
                                         <option>Dari Koran</option>
                                         <option>Dari Radio</option>
