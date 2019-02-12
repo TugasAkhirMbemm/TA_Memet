@@ -13,15 +13,7 @@
             <th>Nama</th>
             <th>No Telp</th>
             <th>Verifikasi</th>
-            <?php
-              $n = 1; foreach ($pengumuman->result() as $p){
-            ?>
-            <?php if ($p->id_pembayaran == 2): ?>
-                          <th>Aksi</th>
-                        <?php else: ?>
-                          
-                        <?php endif ?>
-                        <?php }?>
+            <th>Aksi</th>
           </tr>
           </thead>
           <tbody>
@@ -41,12 +33,12 @@
                         <?php endif; ?>
                         </td>
                         <?php if ($p->id_pembayaran == 2): ?>
-                          <td style="text-align: center;">
+                <td style="text-align: center;">
                   <a href="#" class="btn btn-info"  onclick="updatejs('<?php echo $p->id_user; ?>')">Validate</a>
                   <a class="btn btn-danger " onclick="deleted('<?php echo $p->id_user; ?>')">Delete</a>
                 </td>
-                        <?php else: ?>
-                          
+                <?php else: ?>
+                        <td></td>  
                         <?php endif ?>
               </tr>
             <?php } ?>

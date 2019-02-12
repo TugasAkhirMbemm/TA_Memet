@@ -2,7 +2,7 @@
   <div class="col-xs-12">
     <div class="box">
       <div class="box-header">
-        <h3 class="box-title">Verifikasi Awal Data User TK</h3><br><br>
+        <h3 class="box-title">Verifikasi Data User TK</h3><br><br>
       </div>
       <!-- /.box-header -->
       <div class="box-body">
@@ -13,18 +13,19 @@
             <th>Nama</th>
             <th>No Telp</th>
             <th>Verifikasi</th>
-                          <th>Aksi</th>
-                                  </tr>
+            <th>Aksi</th>
+          </tr>
           </thead>
+
           <tbody>
             <?php
               $n = 1; foreach ($pengumuman->result() as $p){
             ?>
-    					<tr>
-    						<td><?php echo $n++;?></td>
-    						<td><?php echo $p->nama_siswa;?></td>
-    						<td><?php echo $p->no_telp_siswa;?></td>
-    						        <td>
+              <tr>
+                <td><?php echo $n++;?></td>
+                <td><?php echo $p->nama_siswa;?></td>
+                <td><?php echo $p->no_telp_siswa;?></td>
+                        <td>
                         <?php if ($p->id_pembayaran == 2): ?>
                           BELUM TERVERIFIKASI
                         <?php endif; ?>
@@ -33,14 +34,14 @@
                         <?php endif; ?>
                         </td>
                         <?php if ($p->id_pembayaran == 2): ?>
-                          <td style="text-align: center;">
-                  <a href="#" class="btn btn-info"  onclick="updatejs('<?php echo $p->id_user; ?>')">Validate</a>
+                <td style="text-align: center;">
+                  <a class="btn btn-info"  onclick="updatejs('<?php echo $p->id_user; ?>')">Validate</a>
                   <a class="btn btn-danger " onclick="deleted('<?php echo $p->id_user; ?>')">Delete</a>
                 </td>
-                        <?php else: ?>
+              <?php else: ?>
                         <td></td>  
                         <?php endif ?>
-    					</tr>
+              </tr>
             <?php } ?>
             </tbody>
             </table>
@@ -59,10 +60,10 @@
   function deleted(param){
     var proc = window.confirm('Are you sure delete this data?');
     if(proc){
-      document.location='<?php echo base_url(); ?>verifikasi/verifikasi/deletedatatk/'+param;
+      document.location='<?php echo base_url(); ?>verifikasi_awal/verifikasi_awal/deletedatatk/'+param;
     }
   }
   function updatejs(param){
-      document.location='<?php echo base_url(); ?>verifikasi/verifikasi/dttk/'+param;
+      document.location='<?php echo base_url(); ?>verifikasi_awal/verifikasi_awal/dttk/'+param;
   }
 </script>

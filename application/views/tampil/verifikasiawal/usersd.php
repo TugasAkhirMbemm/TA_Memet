@@ -2,7 +2,7 @@
   <div class="col-xs-12">
     <div class="box">
       <div class="box-header">
-        <h3 class="box-title">Verifikasi Awal Data User SD </h3><br><br>
+        <h3 class="box-title">Verifikasi Data User SD</h3><br><br>
       </div>
       <!-- /.box-header -->
       <div class="box-body">
@@ -32,10 +32,14 @@
                           TERVERIFIKASI
                         <?php endif; ?>
                         </td>
+                        <?php if ($p->id_pembayaran == 2): ?>
                 <td style="text-align: center;">
                   <a href="#" class="btn btn-info"  onclick="updatejs('<?php echo $p->id_user; ?>')">Validate</a>
                   <a class="btn btn-danger " onclick="deleted('<?php echo $p->id_user; ?>')">Delete</a>
-                </td>
+                 </td>
+              <?php else: ?>
+                        <td></td>  
+                        <?php endif ?>
               </tr>
             <?php } ?>
             </tbody>
@@ -55,10 +59,10 @@
   function deleted(param){
     var proc = window.confirm('Are you sure delete this data?');
     if(proc){
-      document.location='<?php echo base_url(); ?>verifikasi/verifikasi/deletedatasd/'+param;
+      document.location='<?php echo base_url(); ?>verifikasi_awal/verifikasi_awal/deletedatasd/'+param;
     }
   }
   function updatejs(param){
-      document.location='<?php echo base_url(); ?>verifikasi/verifikasi/dtsd/'+param;
+      document.location='<?php echo base_url(); ?>verifikasi_awal/verifikasi_awal/dtsd/'+param;
   }
 </script>

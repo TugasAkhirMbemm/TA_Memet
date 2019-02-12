@@ -1,12 +1,12 @@
 <div class="col-md-12">
     <div class="box box-info">
     <div class="box-header with-border">
-        <h3 class="box-title">Verifikasi Awal Data User TK</h3>
+        <h3 class="box-title">Verifikasi Data User TK</h3>
     </div>
 
-    <form method="post" action="<?php echo base_url('verifikasi/verifikasiawal/proses_update_tk') ?>" class="form-horizontal">
-        <div class="box-body">
+    <form method="post" action="<?php echo base_url('verifikasi_awal/verifikasi_awal/proses_update_tk') ?>" class="form-horizontal">
       <?php foreach ($pengumuman->result() as $p) { ?>
+        <div class="box-body">
             <div class="form-group">
                 <label for="inputnama" class="col-sm-2 control-label">Bukti Transaksi</label>
                 <div class="col-sm-10">
@@ -14,17 +14,18 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <!-- <label for="inputnama" class="col-sm-2 control-label">ID User</label> -->
+            <!-- <div class="form-group">
+                <label for="inputnama" class="col-sm-2 control-label">ID User</label>
                 <div class="col-sm-10">
-              <input type="text" hidden="" value="<?php echo $p->id_user;?>" name="id_user">
+              <input type="text" class="form-control" id="id" value="<?php echo $p->id_user;?>" name="id_user" readonly>
               </div>
-            </div>
+            </div> -->
+
 
             <div class="form-group">
                 <label for="inputnama" class="col-sm-2 control-label">Nama User</label>
                 <div class="col-sm-10">
-                <input type="text" class="form-control" id="Nama" value="<?php echo $p->nama_siswa; ?>" readonly>
+                <input type="text" class="form-control" id="Nama" value="<?php echo $p->nama_siswa; ?>" readonly="">
                 </div>
             </div>
 
@@ -45,13 +46,13 @@
                     </select>
                 </div>
             </div>
-<?php } ?>
+
             <div class="box-footer">
                 <a href="#" class="btn btn-info " onclick="back('')">Kembali</a>
                 <button type="submit" class="btn btn-info pull-right">simpan</button>
             </div>
-      
         </div>
+        <?php } ?>
     </form>
 
   </div>
@@ -69,7 +70,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <img src="<?php echo base_url('/gambar/daftar_ulang/').$p->nama_gambar;?>" alt="BUKTI TRANSAKSI" width="870" height="600">
+        <img src="<?php echo base_url('/gallery/Bukti_daftar_ulang/').$p->nama_gambar;?>" alt="BUKTI TRANSAKSI" width="870" height="600">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -79,7 +80,13 @@
 </div>
 
 <script type="text/javascript">
+// function deleted(param){
+// var proc = window.confirm('Are you sure delete this data?');
+// if(proc){
+// document.location='<?php echo base_url(); ?>pengumuman/pengumuman/pgtk/'+param;
+// }
+// }
 function back(param){
-document.location='<?php echo base_url(); ?>verifikasi/verifikasiawal/pgtk/'+param;
+document.location='<?php echo base_url(); ?>verifikasi_awal/verifikasi_awal/pgtk/'+param;
 }
 </script>

@@ -10,16 +10,16 @@
             <div class="form-group">
                 <label for="inputnama" class="col-sm-2 control-label">Bukti Transaksi</label>
                 <div class="col-sm-10">
-                    <a data-toggle="modal" data-target="#gambarModal"><img class="img-fluid" src="<?php echo base_url('/gambar/daftar_ulang/').$p->nama_gambar;?>" alt="BUKTI TRANSAKSI" width="304" height="236"></a>
+                    <img class="img-fluid" src="<?php echo base_url('/gallery/Bukti_daftar_ulang/').$p->gambar;?>" alt="BUKTI TRANSAKSI" width="304" height="236">
                 </div>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="inputnama" class="col-sm-2 control-label">ID User</label>
                 <div class="col-sm-10">
-              <input type="text" class="form-control" id="id" value="<?php echo $p->id_user;?>" name="id_user" readonly>
+              <input type="text" class="form-control" id="id" value="<?php echo $p->id_user;?>" name="id_user">
               </div>
-            </div>
+            </div> -->
 
             <div class="form-group">
                 <label for="inputnama" class="col-sm-2 control-label">Nama User</label>
@@ -35,16 +35,13 @@
                 </div>
             </div>
 
-            <div class="form-group">
+           <div class="form-group">
               <label for="statusverivikasi"  class="col-sm-2 control-label">Status</label>
                 <div class="col-sm-10">
-                    <select class="form-control" name="status" value="<?php echo $p->id_pembayaran; ?>">
-                        <option <?php if ($p->id_pembayaran=="1"): ?>
-                          SELECTED
-                        <?php endif ?>value="1">TERVERIFIKASI</option>
-                        <option <?php if ($p->id_pembayaran=="2"): ?>
-                          SELECTED
-                        <?php endif ?>value="2">BELUM TERVERIFIKASI</option>
+                    <select class="form-control" name="status" required="">
+                        <option value="2">Pilih Option</option>
+                        <option value="2">Belum Terverifikasi</option>
+                        <option value="1">Sudah Terverifikasi</option>
                     </select>
                 </div>
             </div>
@@ -72,7 +69,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <img src="<?php echo base_url('/gambar/daftar_ulang/').$p->nama_gambar;?>" alt="BUKTI TRANSAKSI" width="870" height="600">
+         <img src="<?php echo base_url('/gallery/Bukti_daftar_ulang/').$p->nama_gambar;?>" alt="BUKTI TRANSAKSI" width="870" height="600">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

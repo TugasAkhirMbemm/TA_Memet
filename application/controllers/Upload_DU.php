@@ -28,8 +28,8 @@ class Upload_DU extends CI_Controller {
             $upload_data = $this -> upload -> data ();
             $foto = "gallery/Bukti_daftar_ulang/".$upload_data['file_name'];
         $data = array(
-        'id_user' => 3,
-        'id_siswa'=> 13,
+        'id_user' => 1,
+        'id_siswa'=> 14,
         'id_pembayaran'=>2,
         'gambar' => $foto
         );

@@ -3,7 +3,7 @@
     <div class="box">
       <div class="box-header">
         <h3 class="box-title">Masukkan Nilai Siswa TK</h3><br><br>
-        <!-- <a href="<?php echo base_url('petugas/petugasdata/tambahData')?>" class="btn btn-primary pull-left" style="width: 30%;">Tambah Data Petugas</a> -->
+       <!--  <a href="<?php echo base_url('petugas/petugasdata/tambahData')?>" class="btn btn-primary pull-left" style="width: 30%;">Tambah Data Petugas</a> -->
 
       </div>
       <!-- /.box-header -->
@@ -26,7 +26,7 @@
               <tr>
                 <td><?php echo $no++?></td>
                 <td><?php echo $n->nama_siswa; ?></td>
-                <td><?php echo $n->nilai_psikotes; ?></td>
+                <td><?php echo $n->nilai_observasi; ?></td>
                 <td style="text-align:center;">
                   <a href="#" class="btn btn-info " onclick="updatejs('<?php echo $n->id_siswa; ?>')">Edit</a>
                   <a class="btn btn-danger " onclick="deleted('<?php echo $n->id_siswa; ?>')">Delete</a>

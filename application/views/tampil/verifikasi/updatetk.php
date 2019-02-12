@@ -14,12 +14,12 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <!-- <label for="inputnama" class="col-sm-2 control-label">ID User</label> -->
+            <!-- <div class="form-group">
+                <label for="inputnama" class="col-sm-2 control-label">ID User</label>
                 <div class="col-sm-10">
               <input type="text" hidden="" value="<?php echo $p->id_user;?>" name="id_user">
               </div>
-            </div>
+            </div> -->
 
             <div class="form-group">
                 <label for="inputnama" class="col-sm-2 control-label">Nama User</label>
@@ -69,7 +69,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <img src="<?php echo base_url('/gambar/daftar_ulang/').$p->nama_gambar;?>" alt="BUKTI TRANSAKSI" width="870" height="600">
+        <img src="<?php echo base_url('/gallery/Bukti_daftar_ulang/').$p->nama_gambar;?>" alt="BUKTI TRANSAKSI" width="870" height="600">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -33,12 +33,12 @@
                         <?php endif; ?>
                         </td>
                         <?php if ($p->id_pembayaran == 2): ?>
-                          <td style="text-align: center;">
+                <td style="text-align: center;">
                   <a href="#" class="btn btn-info"  onclick="updatejs('<?php echo $p->id_user; ?>')">Validate</a>
                   <a class="btn btn-danger " onclick="deleted('<?php echo $p->id_user; ?>')">Delete</a>
                 </td>
-                        <?php else: ?>
-                          
+                <?php else: ?>
+                        <td></td>  
                         <?php endif ?>
               </tr>
             <?php } ?>

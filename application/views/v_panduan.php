@@ -8,8 +8,7 @@
   </div>
 </section>
 <br>
-
-<h1>BELOM ADA ISINYA, heheheheh </h1>
-
+<a><img style="width: 100%" src="<?php echo base_url() ?>master/assets/img/alur.png" alt="" title="" /></img></a>
+<!-- <?php echo img('gallery/alur.png'); ?> -->
 <?php $this->load->view('side/footer') ?>
 <?php $this->load->view('side/js') ?>

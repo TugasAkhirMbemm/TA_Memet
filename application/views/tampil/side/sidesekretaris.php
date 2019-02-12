@@ -107,16 +107,16 @@
        <ul class="sidebar-menu">
        <!--  <li class="header">MAIN NAVIGATION</li> -->
         <li class="treeview">
-          <a href="<?php echo base_url('verifikasi/verifikasiawal')?>">
-            <i class="fa fa-newspaper-o"></i> <span>Verifikasi Pendaftaran</span>
+          <a href="<?php echo base_url('verifikasi_awal/verifikasi_awal')?>">
+            <i class="fa fa-newspaper-o"></i> <span>Verifikasi Pendaftaran User</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('verifikasi/verifikasiawal/pgtk')?>"><i class="fa fa-circle-o"></i>TK</a></li>
-            <li><a href="<?php echo base_url('verifikasi/verifikasiawal/pgsd')?>"><i class="fa fa-circle-o"></i> SD</a></li>
-            <li><a href="<?php echo base_url('verifikasi/verifikasiawal/pgsmp')?>"><i class="fa fa-circle-o"></i> SMP</a></li>
+            <li><a href="<?php echo base_url('verifikasi_awal/verifikasi_awal/pgtk')?>"><i class="fa fa-circle-o"></i>TK</a></li>
+            <li><a href="<?php echo base_url('verifikasi_awal/verifikasi_awal/pgsd')?>"><i class="fa fa-circle-o"></i> SD</a></li>
+            <li><a href="<?php echo base_url('verifikasi_awal/verifikasi_awal/pgsmp')?>"><i class="fa fa-circle-o"></i> SMP</a></li>
           </ul>
         </li>
       </ul>

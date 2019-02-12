@@ -1,28 +1,27 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Verifikasi extends CI_Controller {
+class verifikasi_awal extends CI_Controller {
 
 	//view tampilan form data awal verivikasi user baru
 
 	 public function pgtk(){
-		$data['pengumuman']=$this->mymodel->tampilverifikasitk();
+		// $data['pengumuman']=$this->db->query('SELECT * FROM siswa WHERE id_siswa == 1');
+		$data['pengumuman']=$this->mymodel->verifikasi_awaltk();
 	 	$data['side']='tampil/side/sidesekretaris';
-	 	$data['content']='tampil/verifikasi/usertk';
+	 	$data['content']='tampil/verifikasi_awal/usertk';
 	 	$this->load->view('tampil/utama/main',$data);
 	}
-
 	 public function pgsd(){
-		 $data['pengumuman']=$this->mymodel->tampilverifikasisd();
+		 $data['pengumuman']=$this->mymodel->verifikasi_awalsd();
 	 	$data['side']='tampil/side/sidesekretaris';
-	 	$data['content']='tampil/verifikasi/usersd';
+	 	$data['content']='tampil/verifikasi_awal/usersd';
 	 	$this->load->view('tampil/utama/main',$data);
 	 }
-
 	 public function pgsmp(){
-		 $data['pengumuman']=$this->mymodel->tampilverifikasismp();
+		 $data['pengumuman']=$this->mymodel->verifikasi_awalsmp();
 	 	$data['side']='tampil/side/sidesekretaris';
-	 	$data['content']='tampil/verifikasi/usersmp';
+	 	$data['content']='tampil/verifikasi_awal/usersmp';
 	 	$this->load->view('tampil/utama/main',$data);
 	 }
 
@@ -31,80 +30,74 @@ class Verifikasi extends CI_Controller {
 	 public function dttk(){
 	 	//update data tk (view)
 		$id=$this->uri->segment(4);
-		$data['pengumuman']=$this->mymodel->verifikasi_ulang($id);
+		$data['pengumuman']=$this->mymodel->verifikasi_awal($id);
 	 	$data['side']='tampil/side/sidesekretaris';
-	 	$data['content']='tampil/verifikasi/updatetk';
+	 	$data['content']='tampil/verifikasi_awal/updatetk';
 	 	$this->load->view('tampil/utama/main',$data);
 	 }
 	  public function dtsd(){
 	 	//update data sd (view)
 		$id=$this->uri->segment(4);
-		$data['pengumuman']=$this->mymodel->verifikasi_ulang($id);
+		$data['pengumuman']=$this->mymodel->verifikasi_awal($id);
 	 	$data['side']='tampil/side/sidesekretaris';
-	 	$data['content']='tampil/verifikasi/updatesd';
+	 	$data['content']='tampil/verifikasi_awal/updatesd';
 	 	$this->load->view('tampil/utama/main',$data);
 	 }
 	  public function dtsmp(){
 	 	//update data smp (view)
 		$id=$this->uri->segment(4);
-		$data['pengumuman']=$this->mymodel->verifikasi_ulang($id);
+		$data['pengumuman']=$this->mymodel->verifikasi_awal($id);
 	 	$data['side']='tampil/side/sidesekretaris';
-	 	$data['content']='tampil/verifikasi/updatesmp';
+	 	$data['content']='tampil/verifikasi_awal/updatesmp';
 	 	$this->load->view('tampil/utama/main',$data);
 	 }
 
 	 public function proses_update_tk(){
 		 //proses update verifikasi pertama atau pendaftaran baru
 		$where['id_user']=$this->input->post('id_user');
-		// $update_data = $this->db->update('bukti_transaksi_daftar_ulang', $data);
-
  		$data['id_pembayaran']=$this->input->post('status');
- 		$this->mymodel->update('pendaftaran_ulang',$data, $where);
- 		
- 		header('location:'.base_url().'verifikasi/verifikasi/pgtk');
+ 		$this->mymodel->update('pendaftaran_baru',$data, $where);
+ 		header('location:'.base_url().'verifikasi_awal/verifikasi_awal/pgtk');
 	 }
 
 	 public function proses_update_sd(){
 		 //proses update verifikasi pertama atau pendaftaran baru
 		$where['id_user']=$this->input->post('id_user');
-		// $this->mymodel->update('pendaftaran_ulang',$data, $where);
-
  		$data['id_pembayaran']=$this->input->post('status');
- 		$this->mymodel->update('pendaftaran_ulang',$data, $where);
- 		
- 		header('location:'.base_url().'verifikasi/verifikasi/pgsd');
+ 		$this->mymodel->update('pendaftaran_baru',$data, $id);
+ 		header('location:'.base_url().'verifikasi_awal/verifikasi_awal/pgsd');
 	 }
 
 	 public function proses_update_smp(){
 		 //proses update verifikasi pertama atau pendaftaran baru
 		$where['id_user']=$this->input->post('id_user');
  		$data['id_pembayaran']=$this->input->post('status');
- 		$this->mymodel->update('pendaftaran_ulang',$data, $where);
- 		header('location:'.base_url().'verifikasi/verifikasi/pgsmp');
+ 		$this->mymodel->update('pendaftaran_baru',$data, $id);
+ 		header('location:'.base_url().'verifikasi_awal/verifikasi_awal/pgsmp');
 	 }
 
 	 public function deletedatatk()
  	{
  		$id=$this->uri->segment(4);
  		$deletebyid=array('id_user'=>$id);
- 		$this->mymodel->delete('pendaftaran_ulang',$deletebyid);
- 		header('location:'.base_url().'verifikasi/verifikasi/pgtk');
+ 		$this->mymodel->delete('pendaftaran_baru',$deletebyid);
+ 		header('location:'.base_url().'verifikasi_awal/verifikasi_awal/pgtk');
  	}
 
 	public function deletedatasd()
  {
 	 $id=$this->uri->segment(4);
 	 $deletebyid=array('id_user'=>$id);
-	 $this->mymodel->delete('pendaftaran_ulang',$deletebyid);
-	 header('location:'.base_url().'verifikasi/verifikasi/pgsd');
+	 $this->mymodel->delete('pendaftaran_baru',$deletebyid);
+	 header('location:'.base_url().'verifikasi_awal/verifikasi_awal/pgsd');
  }
 
  public function deletedatasmp()
 {
 	$id=$this->uri->segment(4);
 	$deletebyid=array('id_user'=>$id);
-	$this->mymodel->delete('pendaftaran_ulang',$deletebyid);
-	header('location:'.base_url().'verifikasi/verifikasi/pgsmp');
+	$this->mymodel->delete('pendaftaran_baru',$deletebyid);
+	header('location:'.base_url().'verifikasi_awal/verifikasi_awal/pgsmp');
 }
 
 }

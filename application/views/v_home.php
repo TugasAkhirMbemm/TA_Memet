@@ -4,7 +4,7 @@
 <section id="head">
   <div class="container wow fadeIn">
     <div class="section-header"><br>
-      <h4 class="section-title" style="color: #fff; font-size: 25px">Yayasan Al-Baitul Amien</h4>
+      <h4 class="section-title" style="color: #fff; font-size: 25px">Yayasan Masjid Jami' Al-Baitul Amien</h4>
     </div>
   </div>
 </section>
@@ -12,7 +12,7 @@
     <div class="hero-container">
 	<br>
       <p style="color: #fff; font-size: 45px; font-weight: bold; margin-top: 10%">Selamat Datang Di Website Kami<p>
-      <p style="color: #fff; font-size: 30px; margin-top: -5%">Yayasan Al-Baitul Amien Jember</p>
+      <p style="color: #fff; font-size: 30px; margin-top: -5%">Yayasan Masjid Jami' Al-Baitul Amien Jember</p>
       <a href="#about" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- #hero -->
@@ -29,26 +29,20 @@
           <div class="col-lg-6 content order-lg-1 order-2">
             <h2 class="title">Profil Yayasan</h2>
             <p>
-              Yayasan Al Baitul Amien merupakan salah satu yayasan terbesar di kota Jember. Yayasan ini menyediakan beberapa lembaga pendidikan diantaranya PAUD, SD, SMP, dan TPA.
+              Yayasan Masjid Jami' Al Baitul Amien merupakan salah satu yayasan terbesar di kota Jember. Yayasan ini menyediakan beberapa lembaga pendidikan diantaranya PAUD, SD, SMP, dan TPA.
             </p>
              <h2 class="title">Keunggulan Yayasan</h2>
 
             <div class="icon-box wow fadeInUp">
               <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a>Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <h4 class="title"><a>Prestasi akhlak mulia</a></h4>
+              <p class="description">Dengan kemampuan pendidik bukan hanya akademik tetapi akan pengetahuan agama maka akan menjadikan siswa memiliki aklak yang mulia sesuai harapan.</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-photo"></i></div>
-              <h4 class="title"><a>Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-
-            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-              <div class="icon"><i class="fa fa-bar-chart"></i></div>
-              <h4 class="title"><a>Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title"><a>Berprestasi optimal</a></h4>
+              <p class="description">Standart pengajar tidak diragukan lagi akan mampu membawa siswa memiliki prestasi yang gemilang</p>
             </div>
 
           </div>

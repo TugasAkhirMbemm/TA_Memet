@@ -1,16 +1,16 @@
 <div class="col-md-12">
     <div class="box box-info">
     <div class="box-header with-border">
-        <h3 class="box-title">Verifikasi Awal Data User SD</h3>
+        <h3 class="box-title">Verifikasi Data User SD</h3>
     </div>
 
     <?php foreach ($pengumuman->result() as $p) { ?>
-    <form method="post" action="<?php echo base_url('verifikasi/verifikasiawal/proses_update_sd') ?>" class="form-horizontal">
+    <form method="post" action="<?php echo base_url('verifikasi_awal/verifikasi_awal/proses_update_sd') ?>" class="form-horizontal">
         <div class="box-body">
             <div class="form-group">
                 <label for="inputnama" class="col-sm-2 control-label">Bukti Transaksi</label>
                 <div class="col-sm-10">
-                    <a data-toggle="modal" data-target="#gambarModal"><img class="img-fluid" src="<?php echo base_url('/gambar/daftar_ulang/').$p->nama_gambar;?>" alt="BUKTI TRANSAKSI" width="304" height="236"></a>
+                    <img class="img-fluid" src="<?php echo base_url('/gallery/Bukti_daftar_ulang/').$p->gambar;?>" alt="BUKTI TRANSAKSI" width="304" height="236">
                 </div>
             </div>
 
@@ -39,6 +39,7 @@
               <label for="statusverivikasi"  class="col-sm-2 control-label">Status</label>
                 <div class="col-sm-10">
                     <select class="form-control" name="status" value="<?php echo $p->id_pembayaran; ?>">
+                        <option selected="selected">-Pilih-</option>
                         <option <?php if ($p->id_pembayaran=="1"): ?>
                           SELECTED
                         <?php endif ?>value="1">TERVERIFIKASI</option>
@@ -72,7 +73,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <img src="<?php echo base_url('/gambar/daftar_ulang/').$p->nama_gambar;?>" alt="BUKTI TRANSAKSI" width="870" height="600">
+        <img src="<?php echo base_url('/gambar/daftar_baru/').$p->nama_bukti_gambar;?>" alt="BUKTI TRANSAKSI" width="870" height="600">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -89,6 +90,6 @@
 // }
 // }
 function back(param){
-document.location='<?php echo base_url(); ?>verifikasi/verifikasiawal/pgsd/'+param;
+document.location='<?php echo base_url(); ?>verifikasi_awal/verifikasi_awal/pgsd/'+param;
 }
 </script>

@@ -20,11 +20,11 @@
             <?php
               $n = 1; foreach ($pengumuman->result() as $p){
             ?>
-    					<tr>
-    						<td><?php echo $n++;?></td>
-    						<td><?php echo $p->nama_siswa;?></td>
-    						<td><?php echo $p->no_telp_siswa;?></td>
-    						        <td>
+              <tr>
+                <td><?php echo $n++;?></td>
+                <td><?php echo $p->nama_siswa;?></td>
+                <td><?php echo $p->no_telp_siswa;?></td>
+                        <td>
                         <?php if ($p->id_pembayaran == 2): ?>
                           BELUM TERVERIFIKASI
                         <?php endif; ?>
@@ -32,11 +32,15 @@
                           TERVERIFIKASI
                         <?php endif; ?>
                         </td>
-    						<td style="text-align: center;">
-    							<a href="#" class="btn btn-info"  onclick="updatejs('<?php echo $p->id_user; ?>')">Validate</a>
+                        <?php if ($p->id_pembayaran == 2): ?>
+                <td style="text-align: center;">
+                  <a href="#" class="btn btn-info"  onclick="updatejs('<?php echo $p->id_user; ?>')">Validate</a>
                   <a class="btn btn-danger " onclick="deleted('<?php echo $p->id_user; ?>')">Delete</a>
                 </td>
-    					</tr>
+                <?php else: ?>
+                        <td></td>  
+                        <?php endif ?>
+              </tr>
             <?php } ?>
             </tbody>
             </table>

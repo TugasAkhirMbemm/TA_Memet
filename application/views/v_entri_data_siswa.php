@@ -56,13 +56,13 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Nama Panggilan</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="nama_panggilan" required="">
+                                      <input type="text" placeholder="..." class="form-control" name="nama_panggilan" size="30" maxlength="100" onKeyPress="return goodchars(event,'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ',this)" required="">
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Tempat Lahir</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="tempat_lahir" required="">
+                                      <input type="text" placeholder="..." class="form-control" name="tempat_lahir" size="30" maxlength="100" onKeyPress="return goodchars(event,'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ',this)" required="">
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -171,7 +171,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Aktivitas yang paling disukai</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="aktivitas_yg_disukai">
+                                      <input type="text" placeholder="..." class="form-control" name="aktivitas_yg_disukai" size="30" maxlength="100" onKeyPress="return goodchars(event,'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ',this)">
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -228,7 +228,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Keadaan Selama Dalam Kandungan</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="keadaan_dalam_kandungan">
+                                      <input type="text" placeholder="..." class="form-control" name="keadaan_dalam_kandungan" size="30" maxlength="100" onKeyPress="return goodchars(event,'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ',this)">
                                   </div>
                               </div>
                               <div class="form-group row">
